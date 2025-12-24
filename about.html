@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marble Polishing</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- ========================================= -->
+<!-- BOOTSTRAP GRID LAYOUT -->
+<!-- ========================================= -->
+  <header class="hero-header">
+
+    <!-- FIXED NAVBAR WRAPPER -->
+    <div class="navbar-container">
+
+        <div class="header-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+
+            <!-- Navigation Menu (Desktop) -->
+            <nav class="navbar">
+                <ul class="sidebar-menu desktop-menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="product.html">PRODUCTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <!-- MOBILE TOGGLE BUTTON -->
+                    <button id="menuBtn" class="mobile-menu-button" onclick="toggleSidebar()">
+            <i class="fa fa-bars"></i>
+        </button>
+        </div>
+    </div>
+
+
+    <!-- MOBILE SIDEBAR -->
+    <div id="sidebar"  class="sidebar">
+        <ul class="sidebar-menu">
+            <li><a href="index.html" onclick="toggleSidebar()">HOME</a></li>
+            <li><a href="about.html" onclick="toggleSidebar()">ABOUT</a></li>
+            <li><a href="product.html" onclick="toggleSidebar()">PRODUCTS</a></li>
+            <li><a href="contact.html" onclick="toggleSidebar()">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Title -->
+    <div class="page-title">
+        <h1>About Us</h1>
+        <p>HOME &nbsp; > &nbsp; ABOUT</p>
+    </div>
+
+    <!-- ⭐ BOTTOM CENTER MARBLE IMAGE -->
+    <img src="images/stone.png" class="hero-stone" alt="marble">
+
+</header>
+
+<!--  ================================================ ABOUT US ==================================================== -->
+  
+<div class="container-fluid about-section">
+    <div class="row align-items-center">
+        <!-- LEFT SIDE -->
+        <div class="col-lg-6 mb-5 mb-lg-0">
+            <h1 class="heading-1">Marble Supplier & Natural Stone Project</h1>
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <img src="images/marble.jpg" style="width:100%;" height="150px" alt="">
+                </div>
+                <div class="col-md-9 about-left">
+                    <p>
+                    Established 𝚝𝚑𝚎 𝚘𝚛𝚐𝚊𝚗iz𝚊𝚝𝚒𝚘𝚗 𝚒𝚗 2000 𝚝𝚘 𝚖𝚎𝚎𝚝 𝚗 provide International 𝚀uality Abrasives used in Grinding and Polishing 𝚊𝚕𝚕 𝚝𝚢𝚙𝚎 𝚘𝚏 Granite, 𝙼𝚊𝚛𝚋𝚕𝚎 𝚊𝚗𝚍 Natural/Artificial 𝚂𝚝𝚘𝚗𝚎.We 𝚊𝚕𝚜𝚘 𝚒𝚗𝚟𝚘𝚕𝚟𝚎𝚍 𝚒𝚗 𝙳eveloped 𝙿olishing Abrasives to 𝚎𝚖𝚑𝚊𝚗𝚌𝚎 Gloss in hard 𝚜𝚝𝚘𝚗𝚎𝚜.We are known for quality 𝙰brasives Magnesite 𝙰𝚋𝚛𝚊𝚜𝚒𝚟𝚎
+                    </p>
+
+                    <ul class="points-list">
+                        <li>Epoxy 𝚁𝚎𝚖𝚘𝚟𝚎𝚛</li>
+                        <li>𝙵inal Lux & 𝙱𝚞𝚏𝚏</li>
+                        <li>Metal Bond 𝚂ynthetic 𝙳𝚒amond 𝙰brasives</li>
+                        <li>Resin bond 𝙳iamond 𝙰𝚋𝚛𝚊𝚜𝚒𝚟𝚎𝚜</li>
+                        <li>Diamond and Silicon Carbide 𝙱rushes for 𝚃exture & 𝙰ntique 𝙵inishes on 𝚊𝚕𝚕 𝚝𝚢𝚙𝚎 𝚘𝚏 natural and Artificial stone surface.</li>
+                        <li>Flexible polishing pads.</li>
+                        <li>Natural and Artificial stone final 𝙿olishing 𝙰brasives.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- MIDDLE COUNTER -->
+        <div class="col-lg-3 text-center mb-5 mb-lg-0">
+            <h2 class="counter-number" id="counter">0+</h2>
+            <div class="counter-text">Years Of Experience</div>
+        </div>
+
+        <!-- RIGHT IMAGE + TILES -->
+        <div class="col-lg-3 position-relative" >
+            <img src="images/marble.jpg" class="main-image">
+
+            <div class="tiles">
+                <img src="images/p1.jpg">
+                <img src="images/p2.jpg">
+                <img src="images/p3.jpg">
+                <img src="images/p4.jpg">
+                <img src="images/p5.jpg">
+                <img src="images/p6.jpg">
+                <img src="images/p7.jpg">
+                <img src="images/p8.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container py-5 mt-7">
+    <div class="row align-items-start g-4">
+        <!-- LEFT IMAGE -->
+        <div class="col-lg-5 col-md-12">
+            <img src="images/about-1.jpg" alt="abrasive" class="img-about rounded">
+        </div>
+        <!-- RIGHT CONTENT -->
+        <div class="col-lg-7 col-md-12">
+            <h2 class="main-title">We are delivering high quality <br> Products</h2>
+            <p class="main-text">
+                Established in 2000 “VARDHMAN SUPER ABRASIVES” has gained National 
+                Recognition as a Quality Producer of Super Abrasive and Stone Polishing Products. 
+                The high quality finish and cost-effectiveness of our products have made 
+                us the preferred choice of many leading corporates around the world.
+                
+                We are manufacturer of Metal and Resin bonded diamond abrasives for 
+                Marble, Granite, Semi Precious & all type of imported onyx and natural stone.
+                
+                As a leading full line manufacturer of Frankfurt, Fickert-140/170, 
+                Chemfering, 8” Buff abrasives and Polishing Powder. “VARDHMAN SUPER ABRASIVES” 
+                offers precision-built products of high quality and performance for virtually 
+                every conceivable manufacturing application.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- DIVIDER -->
+<hr class="section-divider">
+
+<!-- SECOND SECTION -->
+<div class="container pb-5">
+    <div class="row mt-5 align-items-center g-4">
+        <div class="col-md-7">        
+             <div>
+            <h2 class="sub-title">More about us</h2>
+            <p class="sub-text">
+                Backed by a philosophy of rapid but sustainable change in response to 
+                the evolving needs of our customers, we have developed into a mid-sized 
+                full range abrasive manufacturer.
+               
+                The company maintains a large manufacturing facility at Sukher near Udaipur, 
+                from where VSA products are shipped through out India. The brand has grown in 
+                recognition for quality and performance, safety, timely delivery of products, 
+                short lead-time, prompt service, competitive prices and reduced grinding cost.
+            </p>
+        </div>
+        </div>
+        <div class="col-md-5">
+            <img src="images/about-2.jpg" class="img-fluid rounded">
+        </div>
+    </div>
+</div>
+
+<!-- COUNTER SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const counterEl = document.getElementById("counter");
+
+    // 👉 agar element exist karta hai tabhi code chale
+    if (!counterEl) return;
+
+    const startYear = 2000;
+    const currentYear = new Date().getFullYear();
+    const exp = currentYear - startYear;
+
+    let n = 0;
+
+    const interval = setInterval(() => {
+        if (n >= exp) {
+            clearInterval(interval);
+        } else {
+            n++;
+            counterEl.innerText = n + "+";
+        }
+    }, 40);
+
+});
+</script>
+
+
+<!--  ====================================== footer ============================================= -->
+<div class="body">
+<footer class="footer">
+  <div class="container">
+    <div class="row footer-container">
+
+      <!-- Left -->
+      <div class="col-md-4 footer-left mb-4" style="padding-right: 60px;">
+        <div class="logo1"><img src="images/logo.png" style="width: 300px;" alt="Logo" /></div>
+        <p class="pt-4">
+          Established in 2000 "VARDHMAN SUPER ABRASIVES" has gained National Recognition as a Quality Producer of Super Abrasive and Stone Polishing Products. The high quality finish and cost-effectiveness of our products have made us the preferred choice of many leading corporates around the world.   </p>
+      </div>
+
+      <!-- Middle -->
+      <div class="col-md-4 footer-middle mb-4">
+        <h1>Quick Links</h1>
+
+        <div class="footer-links d-flex justify-content-center text-align-center">
+          <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Contact Us</li>
+          </ul>
+
+          
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="col-md-4 footer-right mb-4" style="padding-left: 60px;">
+         <h1>Contact Us</h1>
+        <a href="Phone:+(91) 9829007823
+">Phone:+(91) 9829007823
+</a>
+        <a href="mailto:himanshu_mht@yahoo.com">E-mail:himanshu_mht@yahoo.com</a>
+
+        <p class="address">
+        203,Hawa magri opp. Police station,Udaipur-313004(Raj.)
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © Copyright 2025 <span class="brand">Unita</span>. All rights reserved.
+    </div>
+  </div>
+</footer>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
