@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Page</title>
+
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- BOOTSTRAP -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<style>
+    @media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Mobile click */
+.dropdown-menu.show {
+  display: block;
+}
+</style>
+<body>
+<!-- ========================================= -->
+<!-- BOOTSTRAP GRID LAYOUT -->
+<!-- ========================================= -->
+ <header class="hero-header">
+
+    <!-- FIXED NAVBAR WRAPPER -->
+    <div class="navbar-container">
+
+        <div class="header-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+
+            <!-- Navigation Menu (Desktop) -->
+            <nav class="navbar">
+                <ul class="sidebar-menu desktop-menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li class="dropdown">
+  <a>PRODUCTS ▾</a>
+
+  <ul class="dropdown-menu">
+    <li><a href="products.html?id=15">Diamond Brush</a></li>
+    <li><a href="products.html?id=16">Silicon Carbide Brush</a></li>
+    <li><a href="products.html?id=17">Metal Bond Synthetic Diamond</a></li>
+    <li><a href="products.html?id=18">Resin Bond Synthetic Diamond</a></li>
+    <li><a href="products.html?id=19">Magnesite Bond</a></li>
+    <li><a href="products.html?id=20">Epoxy Remover</a></li>
+    <li><a href="products.html?id=21">5 Extra Final Polishing</a></li>
+    <li><a href="products.html?id=22">Non Woven Pads</a></li>
+    <li><a href="products.html?id=23">Diamond Pads</a></li>
+    <li><a href="products.html?id=13">Polishing Powder</a></li>            
+        </ul></li>
+
+   
+
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <!-- MOBILE TOGGLE BUTTON -->
+                    <button id="menuBtn" class="mobile-menu-button" onclick="toggleSidebar()">
+            <i class="fa fa-bars"></i>
+        </button>
+        </div>
+    </div>
+
+
+    <!-- MOBILE SIDEBAR -->
+    <div id="sidebar"  class="sidebar">
+        <ul class="sidebar-menu">
+            <li><a href="index.html" onclick="toggleSidebar()">HOME</a></li>
+            <li><a href="about.html" onclick="toggleSidebar()">ABOUT</a></li>
+  <li class="dropdown">
+ <a  class="dropdown-toggle">PRODUCTS ▾</a>
+
+  <ul class="dropdown-menu">
+    <li><a href="products.html?id=15">Diamond Brush</a></li>
+    <li><a href="products.html?id=16">Silicon Carbide Brush</a></li>
+    <li><a href="products.html?id=17">Metal Bond Synthetic Diamond</a></li>
+    <li><a href="products.html?id=18">Resin Bond Synthetic Diamond</a></li>
+    <li><a href="products.html?id=19">Magnesite Bond</a></li>
+    <li><a href="products.html?id=20">Epoxy Remover</a></li>
+    <li><a href="products.html?id=21">5 Extra Final Polishing</a></li>
+    <li><a href="products.html?id=22">Non Woven Pads</a></li>
+    <li><a href="products.html?id=23">Diamond Pads</a></li>
+    <li><a href="products.html?id=13">Polishing Powder</a></li>            
+        </ul></li>
+            <li><a href="contact.html" onclick="toggleSidebar()">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Title -->
+    <div class="page-title">
+        <h1>Products</h1>
+        <p>HOME &nbsp; > &nbsp;PRODUCTS</p>
+    </div>
+
+     <!-- ⭐ BOTTOM CENTER MARBLE IMAGE -->
+    <img src="images/stone.png" class="hero-stone" alt="marble">
+
+</header>
+
+<!--  ================================================ PRODUCTS ==================================================== -->
+<div style="background-color: whitesmoke; padding: 30px 0;">
+
+    <div class="container pt-4 mt-5">
+        <div class="row g-4">
+
+            <!-- Product 1 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="project">
+                    <a href="products.html?id=15" class="project-link">
+                        <div class="project-image">
+                            <img src="images/p15.jpg" alt="">
+                            <div class="project-title">Diamond Brush</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="project">
+                    <a href="products.html?id=16" class="project-link">
+                        <div class="project-image">
+                            <img src="images/p16.jpg" alt="">
+                            <div class="project-title">Silicon Carbide Brush</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="project">
+                    <a href="products.html?id=17" class="project-link">
+                        <div class="project-image">
+                            <img src="images/p17.jpg" alt="">
+                            <div class="project-title">Metal Bond Synthetic Diamond</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="project">
+                    <a href="products.html?id=18" class="project-link">
+                        <div class="project-image">
+                            <img src="images/p18.jpg" alt="">
+                            <div class="project-title">Resin Bond Synthetic Diamond</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="project">
+                    <a href="products.html?id=19" class="project-link">
+                        <div class="project-image">
+                            <img src="images/p19.jpg" alt="">
+                            <div class="project-title">Magnesite Bond</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="project">
+                    <a href="products.html?id=20" class="project-link">
+                        <div class="project-image">
+                            <img src="images/p20.jpg" alt="">
+                            <div class="project-title">Epoxy Remover</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="project">
+                    <a href="products.html?id=21" class="project-link">
+                        <div class="project-image">
+                            <img src="images/p21.jpg" alt="">
+                            <div class="project-title">5 Extra Final Polishing</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="project">
+                    <a href="products.html?id=22" class="project-link">
+                        <div class="project-image">
+                            <img src="images/p22.jpg" alt="">
+                            <div class="project-title">Non Woven Pads</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="project">
+                    <a href="products.html?id=23" class="project-link">
+                        <div class="project-image">
+                            <img src="images/p23.jpg" alt="">
+                            <div class="project-title">Diamond Pads</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="project">
+                    <a href="products.html?id=13" class="project-link">
+                        <div class="project-image">
+                            <img src="images/p13.jpg" alt="">
+                            <div class="project-title">Polishing Powder</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+       
+<!--======== Footer ======== -->
+<footer class="footer">
+    <!-- TOP SINGLE LINE LINKS -->
+    <!-- CENTER LOGO -->
+    <div class="footer-logo">
+      <img src="images/logo.png" style="width: 400px; padding-bottom: 20px;" alt="VSA Logo">
+    </div>
+
+    <!-- BOTTOM LINKS -->
+     <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="product.html">Products</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="mailto:vsuperab@gmail.com">
+        <i class="fa-solid fa-envelope"></i> Email
+      </a>
+      <a href="https://wa.me/917097222229?text=Hello%20I%20want%20to%20know%20about%20your%20products" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://maps.app.goo.gl/GStsuomNfpUxSdke7" target="_blank">
+        <i class="fa-solid fa-location-dot"></i> Maps Location
+      </a>
+    </div>
+
+    <!-- CREDIT -->
+    <div class="footer-credit">
+      Designed & Developed by <span>Keen Infotech</span>
+    </div>
+
+  </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

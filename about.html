@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marble Polishing</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</head>
+<style>
+   
+</style>
+<body>
+
+<!-- ========================================= -->
+<!-- BOOTSTRAP GRID LAYOUT -->
+<!-- ========================================= -->
+  <header class="hero-header">
+
+    <!-- FIXED NAVBAR WRAPPER -->
+    <div class="navbar-container">
+
+        <div class="header-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" width="200px" height="100">
+            </div>
+
+            <!-- Navigation Menu (Desktop) -->
+            <nav class="navbar">
+                <ul class="sidebar-menu desktop-menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="product.html">PRODUCTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <!-- MOBILE TOGGLE BUTTON -->
+                    <button id="menuBtn" class="mobile-menu-button" onclick="toggleSidebar()">
+            <i class="fa fa-bars"></i>
+        </button>
+        </div>
+    </div>
+
+
+    <!-- MOBILE SIDEBAR -->
+    <div id="sidebar"  class="sidebar">
+        <ul class="sidebar-menu">
+            <li><a href="index.html" onclick="toggleSidebar()">HOME</a></li>
+            <li><a href="about.html" onclick="toggleSidebar()">ABOUT</a></li>
+            <li><a href="product.html" onclick="toggleSidebar()">PRODUCTS</a></li>
+            <li><a href="contact.html" onclick="toggleSidebar()">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Title -->
+    <div class="page-title">
+        <h1>About Us</h1>
+        <p>HOME &nbsp; > &nbsp; ABOUT</p>
+    </div>
+
+    <!-- ⭐ BOTTOM CENTER MARBLE IMAGE -->
+    <img src="images/stone.png" class="hero-stone" alt="marble">
+
+</header>
+
+<!--  ================================================ ABOUT US ==================================================== -->
+  
+
+<!-- LOGO -->
+<div class="d-flex justify-content-center pt-2">
+  <img src="images/VSAlogo.png" class="about-logo" alt="Vardhman Super Abrasives Logo">
+</div>
+
+<!-- ABOUT SECTION -->
+<div class="container-fluid about-section ">
+  <div class="row align-items-center">
+
+    <!-- LEFT CONTENT -->
+    <div class="col-lg-6 mb-4 p-4 mb-lg-0">
+      <h4 class="heading-1 ">Vardhman Super Abrasives</h4>
+      <span class="section-title"></span>
+      <p class="about-text mt-2">
+        Established in 2000 in Udaipur, Rajasthan under the supervision of Mr. Himanshu Mehta,
+        Vardhman Super Abrasives has earned national recognition as a trusted manufacturer of
+        high-quality natural stone grinding and polishing abrasives. Our products are known for
+        their superior finish, consistent performance, and cost efficiency, 
+        making us a preferred partner for industrial stone processing units across India.
+
+
+      </p>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="col-lg-6 text-center">
+      <img src="images/about.png" class="main-image" alt="About VSA">
+    </div>
+
+  </div>
+</div>
+
+<!-- COUNTER -->
+<div class="text-center mb-5 mt-5 pt-3">
+  <h2 class="counter-number" id="counter">25+</h2>
+  <div class="counter-text">Years Of Experience</div>
+</div>
+
+<!-- POINTS SECTION -->
+<div class="container-fluid about-left pb-5 m-4 p-4">
+  <div class="row ">
+
+    <!-- ABRASIVES -->
+    <div class="col-md-6 mb-4 ">
+      <h1 class="section-title "><b>Abrasives We Manufacture</b></h1>
+      <ul class="points-list">
+        <li>Diamond / Silicon Carbide Brush</li>
+        <li>Metal Bond Synthetic Diamond</li>
+        <li>Resin Bond Synthetic Diamond</li>
+        <li>Magnesite Bond</li>
+        <li>Epoxy Remover</li>
+        <li>5 Extra Final Polishing</li>
+        <li>Non Woven Pads</li>
+        <li>Diamond Pads</li>
+        <li>Customised abrasives as per client needs</li>
+      </ul>
+    </div>
+
+    <!-- CORE VALUES -->
+    <div class="col-md-6 mb-4">
+      <h1 class="section-title"><b>Our Core Values</b></h1>
+      <ul class="points-list">
+        <li>100% customer satisfaction</li>
+        <li>Quality-driven manufacturing</li>
+        <li>Innovation-based work process</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- COUNTER SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const counterEl = document.getElementById("counter");
+
+    // 👉 agar element exist karta hai tabhi code chale
+    if (!counterEl) return;
+
+    const startYear = 2000;
+    const currentYear = new Date().getFullYear();
+    const exp = currentYear - startYear;
+
+    let n = 0;
+
+    const interval = setInterval(() => {
+        if (n >= exp) {
+            clearInterval(interval);
+        } else {
+            n++;
+            counterEl.innerText = n + "+";
+        }
+    }, 40);
+
+});
+</script>
+
+
+
+<!--  ====================================== footer ============================================= -->
+<footer class="footer">
+    <!-- TOP SINGLE LINE LINKS -->
+    <!-- CENTER LOGO -->
+    <div class="footer-logo">
+      <img src="images/logo.png" style="width: 400px; padding-bottom: 20px;" alt="VSA Logo">
+    </div>
+
+    <!-- BOTTOM LINKS -->
+     <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="product.html">Products</a>
+      <a href="contact.html">Contact Us</a>
+     <a href="mailto:vsuperab@gmail.com">
+        <i class="fa-solid fa-envelope"></i> Email
+      </a>
+     <a href="https://wa.me/917097222229?text=Hello%20I%20want%20to%20know%20about%20your%20products" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://maps.app.goo.gl/GStsuomNfpUxSdke7" target="_blank">
+        <i class="fa-solid fa-location-dot"></i> Maps Location
+      </a>
+    </div>
+
+    <!-- CREDIT -->
+    <div class="footer-credit">
+      Designed & Developed by <span>Keen Infotech</span>
+    </div>
+
+  </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
