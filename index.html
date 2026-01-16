@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marble Polishing</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+</head>
+<style>
+  .background-slider {
+  background: #cbcbcb;
+  padding: 20px 0 30px;
+}
+
+/* ===============================
+   SLIDER WRAPPER
+================================ */
+.product-slider-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 10px;
+}
+
+/* ===============================
+   SLIDER TRACK
+================================ */
+.product-slider-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.product-slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===============================
+   PRODUCT CARD
+================================ */
+.product-card {
+  background: #ffffff; /* 🔥 IMPORTANT FIX */
+  flex: 0 0 calc(100% / 3 - 14px);
+  height: 350px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.15),
+    0 4px 10px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Hover Lift */
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.25),
+    0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   PRODUCT IMAGE
+================================ */
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+/* ===============================
+   OVERLAY TEXT
+================================ */
+.product-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+/* ===============================
+   SLIDER BUTTONS
+================================ */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  z-index: 10;
+}
+
+.slider-btn-left {
+  left: -45px;
+}
+
+.slider-btn-right {
+  right: -45px;
+}
+
+.slider-btn:hover {
+  background: #333;
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .product-card {
+    flex: 0 0 85%;
+    height: 320px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  }
+
+  
+}
+
+/* ================================================== */
+ /* Dropdown Parent */
+
+
+
+
+
+
+
+</style>
+<body>
+
+  <div class="hero-header">
+    <!-- MAIN NAVBAR -->
+    <div class="navbar-container p-4">
+
+        <!-- Logo -->
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo" />
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="top-menu desktop-menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="product.html">PRODUCTS</a>
+      <li><a href="contact.html">CONTACT</a></li>
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="mobile-menu-button ml-4" onclick="toggleSidebar()">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+
+    <!-- MOBILE SIDEBAR (Vertical Menu) -->
+    <div id="sidebar" class="sidebar">
+
+        <!-- Sidebar Heading -->
+        <!-- <div class="sidebar-logo">MARBLE POLISHING</div> -->
+        
+        <ul class="sidebar-menu">
+            <li><a href="index.html" onclick="toggleSidebar()">HOME</a></li>
+            <li><a href="about.html" onclick="toggleSidebar()">ABOUT</a></li>
+           <li class="dropdown">
+  <a href="product.html" onclick="toggleSidebar()">PRODUCTS ▾</a>
+
+  
+</li>
+
+
+
+            <li><a href="contact.html" onclick="toggleSidebar()">CONTACT</a></li>
+        </ul>
+    </div>
+ <div class="bg-img"></div>
+
+  <h1 class="hero-text"><b>STONE POLISHING ABRASIVES</b></h1>
+  <img src="images/stone.png"  class="hero-stone" alt="marble">
+
+</div>
+ 
+<!--  ========after befour start ========= -->
+                           
+<div class="container-fluid justify-content-center text-align-center mt-5 mb-5" id="food" style="margin-top: 9px;">
+  <div class="row">
+    <div class="col-12 col-lg-6 d-flex justify-content-center text-align-center" style="padding: 30px; margin-top: 10px; margin-bottom: 35px;">
+      <section id="home">
+         <div class="stats-content  ">
+          
+        <h2>Natural Stone Grinding & Polishing Abrasives</h2>
+        <p>
+         Vardhman Super Abrasives supplies industrial-grade grinding and polishing abrasives formulated specifically for natural stone — marble, granite, engineered quartz, terrazzo, travertine. Our products combine modern superabrasive technology with process expertise to deliver reproducible surface quality, faster cycle times and lower total cost of finishing.
+        </p>
+        
+      </div>
+    </section>
+      </div>
+    <div class="col-12 col-lg-6" style="padding-right: 60px;">
+      <div class="compare-box "  id="box">
+    <img src="./images/After.png" id="bottom-img">
+    <img src="./images/Before.png" id="top-img">
+
+    <div class="sliderbox" id="sliderbox"></div>
+    <div class="handle" id="handle"></div>
+  </div>
+    </div>
+  </div>
+</div>
+ <!--  ========after befour end ========= -->
+
+
+<!-- ============= why choose us ============= -->
+ <div class="feat bg-gray  pb-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- Heading -->
+      <div class="section-head col-12">
+        <h4><span>Why Choose</span> Vardhman Super Abrasives</h4>
+        <p>
+          We deliver precision-engineered abrasive solutions designed for
+          superior stone processing performance, productivity, and finish quality.
+        </p>
+      </div>
+
+      <!-- Feature 1 -->
+      <div class="col-lg-3 col-sm-6">
+        <div class="item">
+          <span class="icon"><i class="fa fa-cogs"></i></span>
+          <h6>Process Expertise</h6>
+          <p>
+            Product recommendations precisely aligned to stone type,
+            machine configuration, and desired finish.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="col-lg-3 col-sm-6">
+        <div class="item">
+          <span class="icon"><i class="fa fa-line-chart"></i></span>
+          <h6>Cost Efficiency</h6>
+          <p>
+            Engineered bonds and optimized grit sequences that
+            reduce cycle time and pad changeovers.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="col-lg-3 col-sm-6">
+        <div class="item">
+          <span class="icon"><i class="fa fa-check-circle"></i></span>
+          <h6>Consistent Performance</h6>
+          <p>
+            Controlled grain-size distribution and strict QC
+            ensure repeatable and uniform surface results.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="col-lg-3 col-sm-6">
+        <div class="item">
+          <span class="icon"><i class="fa fa-handshake"></i></span>
+          <h6>After-Sales Support</h6>
+          <p>
+            Application trials, on-site training, and custom
+            formulations tailored for stone processing units.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--  end  why choose us ====== -->
+
+<!-- ============ FAQ Section Start============ -->
+<section class="faq-section">
+  <div class="faq-container section-head">
+    <h4 class="faq-title"><span> Frequently Asked</span> Questions Related to  Abrasives(FAQs)</h4>
+<p class="mb-5">Here are some important questions and answers our customers often ask before buying our product.</p>
+    <div class="faq-list">
+      <!-- FAQ 1 -->
+      <article class="faq-item">
+        <button
+          class="faq-header"
+          aria-expanded="false"
+          aria-controls="faq-panel-1"
+          id="faq-trigger-1"
+        >
+          <span class="faq-question">
+            Which abrasive is best for Italian marble?
+          </span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div
+          class="faq-body "
+          id="faq-panel-1"
+          role="region"
+          aria-labelledby="faq-trigger-1"
+        >
+          <p class="">
+              Diamond abrasives (Resin bond depending on stage) are the recommended choice for Italian stones due to their softness and cutting life.
+          </p>
+        </div>
+      </article>
+
+      <!-- FAQ 2 -->
+      <article class="faq-item">
+        <button
+          class="faq-header"
+          aria-expanded="false"
+          aria-controls="faq-panel-2"
+          id="faq-trigger-2"
+        >
+          <span class="faq-question">
+            What grit sequence will give a high-gloss finish?
+          </span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div
+          class="faq-body"
+          id="faq-panel-2"
+          role="region"
+          aria-labelledby="faq-trigger-2"
+        >
+          <p>
+            A staged progression from coarse grinding through progressively finer grits (for example 50 → 100 →  200 → 400 → 600 → 800 → 1200 → 1500 → 3000 → 5000 → 10000) is commonly used.
+          </p>
+        </div>
+      </article>
+
+      <!-- FAQ 3 -->
+      <article class="faq-item">
+        <button
+          class="faq-header"
+          aria-expanded="false"
+          aria-controls="faq-panel-3"
+          id="faq-trigger-3"
+        >
+          <span class="faq-question">
+            Do you supply custom sizes and bonds?
+          </span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div
+          class="faq-body"
+          id="faq-panel-3"
+          role="region"
+          aria-labelledby="faq-trigger-3"
+        >
+          <p>
+            Yes — we offer custom bond formulations, pad diameters, wheel profiles and bonding types to match specific machines and project requirements.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- ============ FAQ Section End============ -->
+
+
+<!-- ========================= slider start =============================  -->
+  
+ <div class="background-slider ">
+<div class="product-slider-wrapper">
+
+  <button class="slider-btn slider-btn-left" onclick="slideLeft()">❮</button>
+
+  <div class="product-slider-track" id="productSlider">
+
+    <div class="product-card">
+      <a href="products.html?id=15">
+        <img src="images/p15.jpg" alt="">
+        <div class="product-overlay">
+          <div>Diamond Brush</div>
+        </div>
+      </a>
+    </div>
+   
+    <div class="product-card">
+      <a href="products.html?id=16">
+        <img src="images/p16.jpg" alt="">
+        <div class="product-overlay">
+          <div>Silicon Carbide Brush</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a href="products.html?id=17">
+        <img src="images/p17.jpg" alt="">
+        <div class="product-overlay">
+          <div>Metal Bond Synthetic Diamond</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a href="products.html?id=18">
+        <img src="images/p18.jpg" alt="">
+        <div class="product-overlay">
+          <div>Resin Bond Synthetic Diamond</div>
+        </div>
+      </a>
+    </div>
+    <div class="product-card">
+      <a href="products.html?id=19">
+        <img src="images/p19.jpg" alt="">
+        <div class="product-overlay">
+          <div>Magnesite Bond</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a href="products.html?id=20">
+        <img src="images/p20.jpg" alt="">
+        <div class="product-overlay">
+          <div>Epoxy Remover</div>
+        </div>
+      </a>
+    </div>
+
+     <div class="product-card">
+      <a href="products.html?id=21">
+        <img src="images/p21.jpg" alt="">
+        <div class="product-overlay">
+          <div>5 Extra Final Polishing</div>
+        </div>
+      </a>
+    </div>
+
+     <div class="product-card">
+      <a href="products.html?id=22">
+        <img src="images/p22.jpg" alt="">
+        <div class="product-overlay">
+          <div>Non Woven Pads</div>
+        </div>
+      </a>
+    </div>
+     <div class="product-card">
+      <a href="products.html?id=23">
+        <img src="images/p23.jpg" alt="">
+        <div class="product-overlay">
+          <div>Diamond Pads</div>
+        </div>
+      </a>
+    </div>
+
+ <div class="product-card">
+      <a href="products.html?id=13">
+        <img src="images/p13.jpg" alt="">
+        <div class="product-overlay">
+          <div>POLISHING POWDER</div>
+        </div>
+      </a>
+    </div>
+
+   
+  </div>
+
+  <button class="slider-btn slider-btn-right" onclick="slideRight()">❯</button>
+</div>
+</div> 
+<script>
+  const slider = document.getElementById("productSlider");
+
+  function getCardWidth() {
+    const card = slider.querySelector(".product-card");
+    const gap = 20; // CSS me jo gap diya hai
+    return card.offsetWidth + gap;
+  }
+
+  function slideLeft() {
+    slider.scrollLeft -= getCardWidth(); // ⭐ 1 card slide
+  }
+
+  function slideRight() {
+    slider.scrollLeft += getCardWidth(); // ⭐ 1 card slide
+  }
+</script>
+<!--  ========================= slider end ==============================-->
+
+<!-- // ================Happy Clients, Products, Happy==================== -->
+
+<section class="stats-section">
+  <div class="container text-center">
+
+    <!-- CALL TO ACTION -->
+    <div class="cta-box mb-5">
+      <h3>Call to action</h3>
+      <p>
+        Specify the stone type, machine and desired finish.  
+        Our team will recommend the right grit sequence, bond type and
+        provide product samples for trial.
+      </p>
+      <p class="cta-contact">
+        📧 <strong>vsuperab@gmail.com</strong> &nbsp; | &nbsp;
+        📞 / 💬 <strong>+91-7097222229</strong>
+      </p>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-container">
+
+      <div class="stat-box">
+        <h2 class="stat-counter" data-target="160">0+</h2>
+        <h4>Clients</h4>
+        <p>Successfully serving across India and Middle East</p>
+      </div>
+
+      <div class="stat-box">
+        <h2 class="stat-counter" data-target="20">0+</h2>
+        <h4>Products</h4>
+        <p>
+          Suitable for line polishing, table polishing and
+          hand polishing machines
+        </p>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM TEXT -->
+    <div class="manufactured-text mt-5">
+      <p>
+        <strong>Manufactured in Udaipur</strong> with national distribution
+        and technical service across India. Product testing follows
+        established grain-size and performance protocols to ensure
+        consistent, industry-acceptable surface finishes.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const counters = document.querySelectorAll(".stat-counter");
+
+  const startCounter = () => {
+    counters.forEach(counter => {
+
+      const target = Number(counter.getAttribute("data-target"));
+      let start = 0;
+      const speed = 20;
+
+      counter.innerText = "0+"; // reset every time
+
+      const updateCounter = () => {
+        if (start < target) {
+          start++;
+          counter.innerText = start + "+";
+          setTimeout(updateCounter, speed);
+        } else {
+          counter.innerText = target + "+";
+        }
+      };
+
+      updateCounter();
+    });
+  };
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCounter(); // 🔥 har baar trigger hoga
+        }
+      });
+    },
+    {
+      threshold: 0.5
+    }
+  );
+
+  observer.observe(document.querySelector(".stats-section"));
+
+});
+</script>
+
+
+
+<!-- =====================footer =================================== -->
+ <footer class="footer">
+    <!-- TOP SINGLE LINE LINKS -->
+    <!-- CENTER LOGO -->
+    <div class="footer-logo">
+      <img src="images/logo.png" style="width: 400px; padding-bottom: 20px;" alt="VSA Logo">
+    </div>
+
+    <!-- BOTTOM LINKS -->
+     <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="product.html">Products</a>
+
+      <a href="contact.html">Contact Us</a>
+      <a href="mailto:vsuperab@gmail.com">
+        <i class="fa-solid fa-envelope"></i> Email
+      </a>
+      <a href="https://wa.me/917097222229?text=Hello%20I%20want%20to%20know%20about%20your%20products" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://maps.app.goo.gl/GStsuomNfpUxSdke7" target="_blank">
+        <i class="fa-solid fa-location-dot"></i> Maps Location
+      </a>
+    </div>
+
+    <!-- CREDIT -->
+    <div class="footer-credit">
+      Designed & Developed by <span>Keen Infotech</span>
+      
+    </div>
+
+  </footer>
+
+
+
+
+ 
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+
+</html>
+
